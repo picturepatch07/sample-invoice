@@ -1,7 +1,10 @@
 import React from 'react'
 import ClientDetails from './components/ClientDetails/ClientDetails'
+import Dates from './components/Dates/Dates'
+import Footer from './components/Footer/Footer'
 import Header from './components/Header/Header'
 import MainDetails from './components/MainDetails/MainDetails'
+import Notes from './components/Notes/Notes'
 import Table from './components/Table/Table'
 
 const App = () => {
@@ -15,38 +18,10 @@ const App = () => {
         <Header handlePrint={handlePrint} />
         <MainDetails />
         <ClientDetails />
-
-        {/* Dates */}
-        <article className='mt-5 mb-5 flex items-end justify-end'>
-          <ul>
-            <li><span className='font-bold'>Invoice Number: </span></li>
-            <li><span className='font-bold'>Invoice Date: </span></li>
-            <li><span className='font-bold'>Due Date: </span></li>
-          </ul>
-        </article>
-        {/* End of Dates  */}
-
+        <Dates />
         <Table />
-
-        {/* Notes */}
-        <section className='mt-8 mb-5'>
-          <p>Notes to the client...</p>
-        </section>
-        {/* End of Notes */}
-
-        {/* Footer */}
-        <footer>
-          <ul className='flex flex-wrap items-center justify-center'>
-            <li><span className='font-bold'>Your Name: </span>Abhishek Anand</li>
-            <li><span className='font-bold'>Your Email: </span>anand2000ys@gmail.com</li>
-            <li><span className='font-bold'>Phone Number: </span>7763919260</li>
-            <li><span className='font-bold'>Bank: </span>Bank Account</li>
-            <li><span className='font-bold'>Account Holder: </span>Abhishek Anand</li>
-            <li><span className='font-bold'>Account Number: </span>123 456 789</li>
-            <li><span className='font-bold'>Website: </span>abhishek.co.in</li>
-          </ul>
-        </footer>
-        {/* End of Footer */}
+        <Notes />
+        <Footer /> 
       </div>
     </div>
   )
