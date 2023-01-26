@@ -29,15 +29,39 @@ const App = () => {
   }
 
   return (
-    <div className='m-5 p-6 xl:max-w-4xl xl:mx-auto bg-white rounded shadow'>
+    <div className='m-5 p-5 md:max-w-4xl md:mx-auto lg:max-w-2xl xl:max-w-4xl bg-white rounded shadow'>
       {showInvoice ?       <div>
         <Header handlePrint={handlePrint} />
-        <MainDetails  name={name} address={address} />
-        <ClientDetails />
-        <Dates />
+
+        <MainDetails  
+        name={name} 
+        address={address} 
+        />
+
+        <ClientDetails 
+        clientName={clientName} 
+        clientAddress={clientAddress} 
+        />
+
+        <Dates 
+        invoiceNumber={invoiceNumber} 
+        invoiceDate={invoiceDate} 
+        dueDate={dueDate} 
+        />
+
         <Table />
-        <Notes />
-        <Footer name={name} address={address} email={email} website={website} /> 
+
+        <Notes notes={notes}/>
+
+        <Footer 
+        name={name} 
+        address={address} 
+        email={email} 
+        website={website} 
+        phone={phone} 
+        bankName={bankName}
+        bankAccount={bankAccount}
+        /> 
         
         <button onClick={() => setShowInvoice(false)} className='mt-5 bg-blue-500 text-white font-bold py-2 px-8 rounded shadow border-2 border-blue-500 hover:bg-tansparent hover:text-blue-500 transition-all duration-300'>Edit Information</button>
 

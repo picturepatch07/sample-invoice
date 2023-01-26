@@ -1,10 +1,10 @@
 import React from 'react'
 
-const Notes = () => {
+const Notes = ({notes}) => {
   return (
     <>
         <section className='mt-8 mb-5'>
-          <p>Notes to the client...</p>
+          <p>{notes}</p>
         </section>
     </>
   )

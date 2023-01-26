@@ -1,13 +1,13 @@
 import React from 'react'
 
-const Dates = () => {
+const Dates = ({invoiceNumber, invoiceDate, dueDate}) => {
   return (
     <>
-        <article className='mt-5 mb-5 flex items-end justify-end'>
+        <article className='mt-5 mb-5 pb-2 flex items-end justify-end'>
           <ul>
-            <li><span className='font-bold'>Invoice Number: </span></li>
-            <li><span className='font-bold'>Invoice Date: </span></li>
-            <li><span className='font-bold'>Due Date: </span></li>
+            <li className='p-1'><span className='font-bold'>Invoice Number: </span>{invoiceNumber}</li>
+            <li className='p-1'><span className='font-bold'>Invoice Date: </span>{invoiceDate}</li>
+            <li className='p-1'><span className='font-bold'>Due Date: </span>{dueDate}</li>
           </ul>
         </article>
     </>
