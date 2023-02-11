@@ -4,7 +4,7 @@ const Notes = ({notes}) => {
   return (
     <>
         <section className='mt-8 mb-5'>
-          <p>{notes}</p>
+          <p className='lg:w-1/2 text-justify'>{notes}</p>
         </section>
     </>
   )

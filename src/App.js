@@ -202,10 +202,11 @@ const App = () => {
 
             <label htmlFor='notes'>Enter Notes</label>
               <input 
-              type="text" 
-              name='notes' 
+              textarea name="notes" 
               id='notes' 
-              placeholder='Enter Notes' 
+              cols="30"
+              rows="20"
+              placeholder='Additional Notes to the client' 
               autoComplete='off'
               value={notes}
               onChange={(e) => setNotes(e.target.value)}
